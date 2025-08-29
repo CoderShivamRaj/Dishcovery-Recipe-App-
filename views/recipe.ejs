@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= recipe.recipe_name %></title>
+    <link rel="stylesheet" href="/recipe.css">
+    <link rel="icon" href="/photo/RecipeLogo.jpg" type="image/x-icon">
+</head>
+<body>
+    <h1><%= recipe.recipe_name %></h1>
+    <hr>
+      
+    <div class="container"><img src="<%= recipe.image_url %>" alt="<%= recipe.recipe_name %>"></div>
+    <h2>Ingredients:</h2>
+    <ul>
+      <% for(let list of recipe.ingredients.split(",")) { %>
+            <li><%= list.trim() %></li>
+       <% } %>
+
+    </ul>
+    <br>
+    <h2>Clean Ingredients:</h2>
+    <ul>
+      <% for(let cleanList of recipe.clened_ingredients.split(",")) { %>
+            <li><%= cleanList.trim() %></li>
+       <% } %>
+    </ul>
+    <br>
+
+    <h2>Steps for Cooking:</h2>
+    <ol>
+        <% for(let step of recipe.steps.split(".")){ %>
+            <li><%= step.trim() %></li>
+
+       <% }%>
+    </ol>
+
+</body>
+</html>

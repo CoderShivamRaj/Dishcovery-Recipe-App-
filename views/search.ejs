@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+    <link rel="stylesheet" href="/home.css">
+    <link rel="icon" href="/photo/RecipeLogo.jpg" type="image/x-icon">
+</head>
+<body>
+  
+
+    
+    <%- include("includes/navbar.ejs") %>
+    <h1 style="text-align: center;"><%= query.toUpperCase() %> RECIPIES</h1>
+    <hr>
+
+
+    <div class="category">
+        <div class=" box">
+            <% for(let info of data){ %>
+                <div class="card">
+                    <img src="<%= info.image_url %> " alt="image recipe">
+                    <h3><%= info.recipe_name %></h3>
+                    <p>Cuisine: <%= info.cuisine %></p>
+                    <p>Cooking Time: <%= info.total_time %> minutes</p>
+                    <form method="get" action="/recipes/<%=info.id%>">
+                        <button>View Recipe</button>
+                    </form>
+                </div>
+            <% } %>
+        </div>
+    </div>
+</body>
+</html>

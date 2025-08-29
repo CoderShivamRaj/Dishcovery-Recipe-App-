@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dishcovery- discover new dishes</title>
+    <link rel="stylesheet" href="/home.css">
+    <link rel="icon" href="/photo/RecipeLogo.jpg" type="image/x-icon">
+</head>
+<body>
+    <%- include('includes/navbar')%>
+    <div class="logobox">
+        <div class="logo">
+            <img src="/photo/RecipeLogo.jpg" alt="Dishcovery Logo">
+
+        </div>
+        <div class="logodesc"><h1>Welcome to Dishcovery App</h1>
+           <p>
+               Discover and share your favorite recipes with our community.
+           </p>
+       </div>
+    </div>
+
+
+    
+
+    
+    <hr>
+
+    <h2>Popular Recipe</h2>
+    <div class="popular">
+        <div class="container">
+            <% for(let info of data.popular){ %>
+                <div class="card">
+                    <img src="<%= info.image_url %> " alt="image recipe">
+                    <h3><%= info.recipe_name %></h3>
+                    <p>Cuisine: <%= info.cuisine %></p>
+                    <p>Cooking Time: <%= info.total_time %> minutes</p>
+                    <form method="get" action="/recipes/<%=info.id%>">
+                        <button>View Recipe</button>
+                    </form>
+                </div>
+            <% } %>
+        </div>
+    </div>
+
+    <h2>Breakfast Recipe</h2>
+    <div class="breakfast">
+        <div class="container">
+            <% for(let info of data.breakfast){ %>
+                <div class="card">
+                    <img src="<%= info.image_url %> " alt="image recipe">
+                    <h3><%= info.recipe_name %></h3>
+                    <p>Cuisine: <%= info.cuisine %></p>
+                    <p>Cooking Time: <%= info.total_time %> minutes</p>
+                    <form method="get" action="/recipes/<%=info.id%>">
+                        <button>View Recipe</button>
+                    </form>
+                </div>
+            <% } %>
+        </div>
+    </div>
+
+    <h2>Lunch Recipe</h2>
+    <div class="lunch">
+        <div class="container">
+            <% for(let info of data.lunch){ %>
+                <div class="card">
+                    <img src="<%= info.image_url %> " alt="image recipe">
+                    <h3><%= info.recipe_name %></h3>
+                    <p>Cuisine: <%= info.cuisine %></p>
+                    <p>Cooking Time: <%= info.total_time %> minutes</p>
+                    <form method="get" action="/recipes/<%=info.id%>">
+                        <button>View Recipe</button>
+                    </form>
+                </div>
+            <% } %>
+        </div>
+    </div>
+
+
+    <h2>Dinner Recipe</h2>
+    <div class="dinner">
+        <div class="container">
+            <% for(let info of data.dinner){ %>
+                <div class="card">
+                    <img src="<%= info.image_url %> " alt="image recipe">
+                    <h3><%= info.recipe_name %></h3>
+                    <p>Cuisine: <%= info.cuisine %></p>
+                    <p>Cooking Time: <%= info.total_time %> minutes</p>
+                    <form method="get" action="/recipes/<%=info.id%>">
+                        <button>View Recipe</button>
+                    </form>
+                </div>
+            <% } %>
+        </div>
+    </div>
+
+
+    <h2>Snacks Recipe</h2>
+    <div class="snacks  ">
+        <div class="container">
+            <% for(let info of data.snacks){ %>
+                <div class="card">
+                    <img src="<%= info.image_url %> " alt="image recipe">
+                    <h3><%= info.recipe_name %></h3>
+                    <p>Cuisine: <%= info.cuisine %></p>
+                    <p>Cooking Time: <%= info.total_time %> minutes</p>
+                    <form method="get" action="/recipes/<%=info.id%>">
+                        <button>View Recipe</button>
+                    </form>
+                </div>
+            <% } %>
+        </div>
+    </div>
+
+    <h2>Non-Veg Recipe</h2>
+    <div class="nonveg">
+        <div class="container">
+            <% for(let info of data.nonveg){ %>
+                <div class="card">
+                    <img src="<%= info.image_url %> " alt="image recipe">
+                    <h3><%= info.recipe_name %></h3>
+                    <p>Cuisine: <%= info.cuisine %></p>
+                    <p>Cooking Time: <%= info.total_time %> minutes</p>
+                    <form method="get" action="/recipes/<%=info.id%>">
+                        <button>View Recipe</button>
+                    </form>
+                </div>
+            <% } %>
+        </div>
+    </div>
+
+    <h2>Vegeterian Recipe</h2>
+    <div class="vegeterian">
+        <div class="container">
+            <% for(let info of data.vegetarian){ %>
+                <div class="card">
+                    <img src="<%= info.image_url %> " alt="image recipe">
+                    <h3><%= info.recipe_name %></h3>
+                    <p>Cuisine: <%= info.cuisine %></p>
+                    <p>Cooking Time: <%= info.total_time %> minutes</p>
+                    <form method="get" action="/recipes/<%=info.id%>">
+                        <button>View Recipe</button>
+                    </form>
+                </div>
+            <% } %>
+        </div>
+    </div>
+
+
+    <h2>Pizza Recipe</h2>
+    <div class="pizza">
+        <div class="container">
+            <% for(let info of data.pizza){ %>
+                <div class="card">
+                    <img src="<%= info.image_url %> " alt="image recipe">
+                    <h3><%= info.recipe_name %></h3>
+                    <p>Cuisine: <%= info.cuisine %></p>
+                    <p>Cooking Time: <%= info.total_time %> minutes</p>
+                    <form method="get" action="/recipes/<%=info.id%>">
+                        <button>View Recipe</button>
+                    </form>
+                </div>
+            <% } %>
+        </div>
+    </div>
+
+
+    <h2>Burger Recipe</h2>
+    <div class="burger">
+        <div class="container">
+            <% for(let info of data.burger){ %>
+                <div class="card">
+                    <img src="<%= info.image_url %> " alt="image recipe">
+                    <h3><%= info.recipe_name %></h3>
+                    <p>Cuisine: <%= info.cuisine %></p>
+                    <p>Cooking Time: <%= info.total_time %> minutes</p>
+                    <form method="get" action="/recipes/<%=info.id%>">
+                        <button>View Recipe</button>
+                    </form>
+                </div>
+            <% } %>
+        </div>
+    </div>
+
+
+
+    <h2>Noodles Recipe</h2>
+    <div class="noodles">
+        <div class="container">
+            <% for(let info of data.noodles){ %>
+                <div class="card">
+                    <img src="<%= info.image_url %> " alt="image recipe">
+                    <h3><%= info.recipe_name %></h3>
+                    <p>Cuisine: <%= info.cuisine %></p>
+                    <p>Cooking Time: <%= info.total_time %> minutes</p>
+                    <form method="get" action="/recipes/<%=info.id%>">
+                        <button>View Recipe</button>
+                    </form>
+                </div>
+            <% } %>
+        </div>
+    </div>
+
+
+    <h2>Pasta Recipe</h2>
+    <div class="pasta">
+        <div class="container">
+            <% for(let info of data.pasta){ %>
+                <div class="card">
+                    <img src="<%= info.image_url %> " alt="image recipe">
+                    <h3><%= info.recipe_name %></h3>
+                    <p>Cuisine: <%= info.cuisine %></p>
+                    <p>Cooking Time: <%= info.total_time %> minutes</p>
+                    <form method="get" action="/recipes/<%=info.id%>">
+                        <button>View Recipe</button>
+                    </form>
+                </div>
+            <% } %>
+        </div>
+    </div>
+
+    
+    <h2>Biryani Recipe</h2>
+    <div class="biryani">
+        <div class="container">
+            <% for(let info of data.biryani){ %>
+                <div class="card">
+                    <img src="<%= info.image_url %> " alt="image recipe">
+                    <h3><%= info.recipe_name %></h3>
+                    <p>Cuisine: <%= info.cuisine %></p>
+                    <p>Cooking Time: <%= info.total_time %> minutes</p>
+                    <form method="get" action="/recipes/<%=info.id%>">
+                        <button>View Recipe</button>
+                    </form>
+                </div>
+            <% } %>
+        </div>
+    </div>
+    
+</body>
+</html>

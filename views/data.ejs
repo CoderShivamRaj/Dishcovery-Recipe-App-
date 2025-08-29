@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table, th, tr,td {
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Recipe Data</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Ingredients</th>
+                <th>Instructions</th>
+
+                <th>Total Time</th>
+                <th>Cuisine</th>
+                <th>CLEAN_INGREDIENTS</th>
+                <th>URL</th>
+                <th>IMAGE_URL</th>
+                <th>INGREDIENTS_COUNT</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <% for(info of data) { %>
+                <tr>
+                    <td><%= info.id %></td>
+                    <td><%= info.recipe_name %></td>
+                    <td><%= info.ingredients %></td>
+                    <td><%= info.steps %></td>
+                    <td><%= info.total_time %></td>
+                    <td><%= info.cuisine %></td>
+                    <td><%= info.clened_ingredients %></td>
+                    <td><%= info.url %></td>
+                    <td><%= info.image_url %></td>
+                    <td><%= info.total_ingredients %></td>
+
+                </tr>
+            <% } %>
+        </tbody>
+    </table>
+    
+</body>
+</html>

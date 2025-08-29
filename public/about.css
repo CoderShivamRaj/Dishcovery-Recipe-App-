@@ -1,0 +1,27 @@
+h1{
+    text-align: center;
+    background: #f1f1f1;
+}
+h2{
+    text-align: center;
+    background: #f1f1f1;
+}
+.foot{
+    text-align: center;
+    background: #ff7043;
+    height: 100px;
+}
+.foot p{
+    color: white;
+    padding: 30px;
+    font-size: 18px;
+}
+.logo img{
+    height: 200px;
+    width: auto;
+    border-radius: 50%;
+}
+.logo{
+    text-align: center;
+    margin-top: 30px;
+}
