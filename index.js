@@ -20,11 +20,17 @@ app.use(express.json());
 
 const mysql = require("mysql2");
 
+require('dotenv').config(); // This will help to access the environment variables from .env file
+
 const connection = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password : "Shivam@2020",
-    database : "recipedatabasessss"
+  
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASS,
+    database: process.env.DB_NAME,
+    port: process.env.DB_PORT
+
+   
 });
 
 
